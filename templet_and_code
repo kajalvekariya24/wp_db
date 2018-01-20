@@ -1,0 +1,8 @@
+/*
+Template Name: Customers
+*/
+<?php get_template_part( 'content', 'page' ); ?>
+
+<?php the_content();?>
+
+<?php echo "This is our custom template!";?>
