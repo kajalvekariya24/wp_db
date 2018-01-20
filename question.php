@@ -466,3 +466,205 @@ $selected = mysql_select_db("islasde",$dbhandle)
      echo 'ERROR: There was a problem with the query.';
     }*/
 ?>
+=======================================================================================================
+Question: What is Wordpress?
+Wordpress is Content Management System which have robust admin section. From Admin section you can manage the website text/html, image & videos etc. You can easily manage pages & posts. You can set meta title, meta description & meta keywords for each post. It gives you full control over post & pages .
+
+
+
+Question: Is Wordpress opensource?
+Yes, Wordpress is opensource and you can do customization as per your requirement. Wordpress is built in PHP/MySql/javascript/jQuery which is also an opensource.
+
+
+
+Question: What is current stable version of wordpress?
+4.1 released in November 20, 2014
+
+
+
+Question: What kind of website can I build with WordPress?
+WordPress was originally developed as a blogging in 2003 but now it has been changed a lot. you can create personal website as well as commercial website.
+Following types of websites can be built in wordpress:
+
+    Informative Website
+    Personal Website
+    Photo Gallery
+    Business Website
+    E-Commerce website
+    Blogging
+
+Today, million of free/paid wordpress themes, wordpress plugin are available which help you to create as per your requirement.
+
+
+
+Question: From where you can download plugins?
+https://wordpress.org/plugins/
+
+
+
+Question: From where you can download themes?
+https://wordpress.org/themes/
+
+
+
+Question: What is Hooks in wordpress?
+Hooks allow user to create WordPress theme or plugin with shortcode without changing the original files.
+
+
+
+Question: What are the types of hooks in WordPress?
+Following are two types of hooks
+A) Action hooks: This hooks allow you to insert an additional code.
+B) Filter hooks: Filter hooks will only allow you to add a content or text at the end of the post.
+
+
+
+Question: What are positive aspects of wordpress?
+
+    Easy to install and upgrade the wordpress
+    In-built SEO engine and you can manage the URL and meta data as per your requirement.
+    Easy to themes and plugins
+    Multilingual available in more than 70 languages
+    Can be do customization as per requirement
+    Lots of free/paid themes/plugin available
+
+
+
+
+
+Question: What is the default prefix of wordpress tables?
+wp_ is the prefix for wordpress but you can change at the time of installation.
+
+
+
+Question: What is WordPress loop?
+The Loop is PHP code used by WordPress to display posts.
+
+
+
+Question: What are the template tags in WordPress?
+Template tags is a code that instructs WordPress to "do" or "get" something
+
+
+
+Question: What are meta tags in wordpress?
+Meta-tags are keywords and description used to display website.
+
+
+
+Question: How to secure your wordpress website?
+
+    Install security plug-ins like WP security
+    Change password of super admin OR other admin
+    Add security level checks at server level like folder/file permission.
+
+
+
+
+Question: How many tables a default WordPress will have?
+Following are main table in wordpress:
+
+    wp_commentmeta
+    wp_comments
+    wp_links
+    wp_options
+    wp_postmeta
+    wp_posts
+    wp_terms
+    wp_term_relationships
+    wp_term_taxonomy
+    wp_usermeta
+    wp_users
+
+
+
+
+Question: How to hide the top admin bar at the frontend in WordPress?
+Add following code functions.php
+
+add_filter('show_admin_bar', '__return_false');
+
+
+
+
+Question: How to hide Directory Browsing in WordPress from server?
+Add following code in htaccess file
+
+Options -Indexes
+
+
+
+
+Question: How to display custom field in wordpress?
+
+echo get_post_meta($post->ID, 'keyName', true); 
+
+
+
+
+Question: How to run database Query in WordPress?
+
+$wpdb->query("select * from $wpdb->posts   where ID>10 ");
+
+
+
+
+Question: What types of hooks in wordpress is used?
+1)Following are Actions hooks:.
+
+has_action()
+add_action()
+do_action()
+do_action_ref_array()
+did_action()
+remove_action()
+remove_all_actions()
+
+
+2)Following are Filters hooks .
+
+has_filter()
+add_filter()
+apply_filters()
+apply_filters_ref_array()
+current_filter()
+remove_filter()
+remove_all_filters()
+
+
+
+
+Question: How can you backup your WordPress content?
+WordPress admin -> Tools -> Import
+
+
+
+Question: List most commonly functions used in wordpress?
+
+    wp_nav_menu() :- Displays a navigation menu.
+    is_page() :- to check if this is page OR NOT, will return boolean value.
+    get_the_excerpt() :- Copy the excerpt of the post into a specified variable.
+    in_category() :- Check if the specified post is assigned to any of the specified categories OR not.
+    the_title():- Displays the title of the post in website.
+    the_content():- Displays the contents of the post in website.
+
+
+
+
+Question: What are the file structure in wordpress.
+Following are main files which used in wordpress
+
+    index.php :- for index page.
+    search.php :- For display the search result page.
+    single.php :- for single post page.
+    page.php :- display the static pages.
+    category.php :- Display the category page.
+    tag.php :- For display the tags page.
+    author.php :- For display author page.
+    taxonomy.php :- For display the taxonomy archive.
+    attachment.php :- For managing the single attachments page.
+    header.php :- For managing top part of page.
+    footer.php :- For manage bottom part of pages.
+    archive.php :- For archive page display.
+    404.php :- For display 404 error page.
+
