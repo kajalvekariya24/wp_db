@@ -6,3 +6,13 @@ Template Name: Customers
 <?php the_content();?>
 
 <?php echo "This is our custom template!";?>
+============================================================
+// Add Shortcode
+function custom_shortcode() {
+
+}
+add_shortcode( 'custom_shortcode', 'custom_shortcode' );
+[custom_shortcode]
+
+<?php echo do_shortcode('[name_of_shortcode]'); ?>
+=============================================================
