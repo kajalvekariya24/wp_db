@@ -16,3 +16,43 @@ add_shortcode( 'custom_shortcode', 'custom_shortcode' );
 
 <?php echo do_shortcode('[name_of_shortcode]'); ?>
 =============================================================
+ 
+$mixed = get_post_meta( $post_id, $key, $single );
+
+get single value
+-----------------
+$meta = get_post_meta($post->ID, "company_wp_box_g", true);
+echo $meta['fname'];
+
+get row data
+----------------
+<?php 
+$team_members = get_post_meta( $post->ID, 'team_members', true );
+if( !empty( $team_members ) ){
+    foreach( $team_members as $team_member ){
+        echo 'Name:'.$team_member['team-member-name'];
+        echo 'Position:'.$team_member['team-member-position'];
+        echo 'Description:'.$team_member['team-member-description'];
+    }
+}
+?>
+
+--------------------------
+get currant user info
+------------------------
+<?php
+    $current_user = wp_get_current_user();
+    /**
+     * @example Safe usage: $current_user = wp_get_current_user();
+     * if ( !($current_user instanceof WP_User) )
+     *     return;
+     */
+    echo 'Username: ' . $current_user->user_login . '<br />';
+    echo 'User email: ' . $current_user->user_email . '<br />';
+    echo 'User first name: ' . $current_user->user_firstname . '<br />';
+    echo 'User last name: ' . $current_user->user_lastname . '<br />';
+    echo 'User display name: ' . $current_user->display_name . '<br />';
+    echo 'User ID: ' . $current_user->ID . '<br />';
+?>
+
+----------------------------------------------
